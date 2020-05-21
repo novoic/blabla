@@ -6,4 +6,4 @@ jobs:
     steps:
       - checkout
       - run: pip3 install . --user
-      - run: source ./setup_corenlp_linux.sh
+      - run: bash ./setup_corenlp.sh
