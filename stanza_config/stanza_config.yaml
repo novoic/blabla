@@ -1,0 +1,8 @@
+stanza:
+    processors: 'tokenize,lemma,pos,mwt,depparse,ner'
+    dir: 'stanza_resources'
+corenlp:
+    timeout: 30000
+    memory: '4G'
+    endpoint: 'http://localhost:9001'
+    be_quiet: False
