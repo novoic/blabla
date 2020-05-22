@@ -7,7 +7,7 @@ import yaml
 import os
 from jsonschema import validate
 import pandas as pd
-
+from tqdm import tqdm
 
 features_json_schema = {
 	'type': 'object',
@@ -50,7 +50,7 @@ def compute_features(features_yaml_path, stanza_config_file_path, input_dir_path
 	with DocumentProcessor(
 		stanza_config_file_path, features_json['language']
 	) as doc_proc:
-		for input_fp in os.listdir(input_dir_path):
+		for input_fp in tqdm(os.listdir(input_dir_path)):
 			with open(os.path.join(input_dir_path, input_fp)) as f:
 				content = f.read()
 			doc = doc_proc.analyze(content, input_format)
