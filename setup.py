@@ -25,7 +25,8 @@ setup(
         "ipython==7.13.0",
         "jsonschema==3.2.0",
         "pyyaml==5.3.1",
-        "pandas==1.0.3"
+        "pandas==1.0.3",
+        "tqdm==4.46.0"
     ],
     package_data={"": ["*.txt"]},
     include_package_data=True,
