@@ -15,6 +15,20 @@ setup(
         "blabla.language_resources",
         "blabla.sentence_aggregators",
     ],
+    keywords=[
+        "feature-extraction",
+        "language",
+        "machine-learning",
+        "text-processing",
+        "python",
+        "natural-language-processing",
+        "nlp",
+        "stanza",
+        "dementia",
+        "alzheimers-disease",
+        "parkinsons-disease",
+    ],
+    download_url="https://github.com/novoic/blabla/archive/v0.1.tar.gz",
     install_requires=[
         "stanza==1.0.0",
         "flask==1.1.2",
@@ -25,11 +39,18 @@ setup(
         "ipython==7.13.0",
         "jsonschema==3.2.0",
         "pyyaml==5.3.1",
-        "pandas==1.0.3",
-        "tqdm==4.46.0"
+        "pandas==1.0.3"
     ],
     package_data={"": ["*.txt"]},
     include_package_data=True,
     scripts=["bin/blabla"],
     zip_safe=False,
+    classifiers=[
+    'Development Status :: 4 - Beta',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
+    'Intended Audience :: Developers',      # Define that your audience are developers
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',   # Again, pick a license
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+  ],
 )
