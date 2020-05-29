@@ -14,4 +14,4 @@ Please list the reported issues/bugs the PR fixes with # references. (e.g., #123
 ## Changes in BlaBla as a result of the PR
 Please let us know if you think the PR raises any new issues in BlaBla and how can we handle it. Novoic will do its best to address this if it can be resolved.
 
-Please note that before your Pull Request will be merged, you you must sign a [Contributor License Agreement](https://en.wikipedia.org/wiki/Contributor_License_Agreement) (CLA)
+Please note that before your pull request will be merged, you must sign our [Contributor License Agreement](https://gist.github.com/jackanth/e707f8c0dbe7f1768b4e8c6d28d04170) (CLA). Instructions on how to do this will be automatically commented on the PR once you make it.
