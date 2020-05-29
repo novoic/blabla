@@ -3,7 +3,7 @@ You will need to raise the PR for the `dev` branch only.
 
 See our [contributing guide](https://github.com/novoic/blabla/blob/master/CONTRIBUTING.md) for details.
 
-Please include the following details in your Pull Request so we are aware of your contribution to BlaBla.
+Please include the following details in your pull request to make the reviewer's job easier.
 
 - **Description**: Please include a brief description of the reason behind the PR. For example, you could be raising an issue, implementing a bugfix or adding a new feature to BlaBla.
 - **Issue(s) that your PR fixes**: Please list the reported issues/bugs the PR fixes with # references. (e.g., #123). Please make sure you have the issue raised before raising the PR.
