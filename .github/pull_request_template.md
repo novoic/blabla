@@ -1,5 +1,4 @@
-Please note that we do not accept pull requests for the `master` branch. 
-You will need to raise the PR for the `dev` branch only.
+Please note that we do not accept pull requests for the `master` branch. You should raise new PRs for the `dev` branch only.
 
 See our [contributing guide](https://github.com/novoic/blabla/blob/master/CONTRIBUTING.md) for details.
 
