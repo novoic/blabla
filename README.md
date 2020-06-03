@@ -25,7 +25,7 @@ To install BlaBla from source:
 ```bash
 git clone https://github.com/novoic/blabla.git
 cd blabla
-pip3 install .
+pip install .
 ```
 To install BlaBla using PyPI:
 ```bash

@@ -47,10 +47,10 @@ setup(
     scripts=["bin/blabla"],
     zip_safe=False,
     classifiers=[
-    'Development Status :: 4 - Beta',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
-    'Intended Audience :: Healthcare Industry',      # Define that your audience are developers
+    'Development Status :: 4 - Beta',     
+    'Intended Audience :: Healthcare Industry',     
     'Topic :: Scientific/Engineering :: Bio-Informatics',
-    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',   # Again, pick a license
+    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)', 
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
   ],
