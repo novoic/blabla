@@ -15,6 +15,20 @@ setup(
         "blabla.language_resources",
         "blabla.sentence_aggregators",
     ],
+    keywords=[
+        "feature-extraction",
+        "language",
+        "machine-learning",
+        "text-processing",
+        "python",
+        "natural-language-processing",
+        "nlp",
+        "stanza",
+        "dementia",
+        "alzheimers-disease",
+        "parkinsons-disease",
+    ],
+    download_url="https://github.com/novoic/blabla/archive/v0.1.tar.gz",
     install_requires=[
         "stanza==1.0.0",
         "flask==1.1.2",
@@ -32,4 +46,12 @@ setup(
     include_package_data=True,
     scripts=["bin/blabla"],
     zip_safe=False,
+    classifiers=[
+    'Development Status :: 4 - Beta',     
+    'Intended Audience :: Healthcare Industry',     
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)', 
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+  ],
 )

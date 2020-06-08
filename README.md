@@ -19,12 +19,19 @@ For information about contributing, citing, licensing (including commercial lice
 Our documentation can be found [here](https://novoic-blabla.readthedocs.io/en/latest). Our paper can be found [here](https://arxiv.org/abs/2005.10219). For a list of features and their language support, see `FEATURES.md`.
   
 ## Setup
-Note that BlaBla requires **Python version 3.6** or later. To install BlaBla:
+Note that BlaBla requires **Python version 3.6** or later. 
+
+To install BlaBla from source:
 ```bash
 git clone https://github.com/novoic/blabla.git
 cd blabla
-pip3 install .
+pip install .
 ```
+To install BlaBla using PyPI:
+```bash
+pip install blabla
+```
+
 
 ### Installing CoreNLP
 For some features, BlaBla also requires [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/) to be installed. See `FEATURES.md` for a list of these features.
