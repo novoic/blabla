@@ -514,6 +514,101 @@ class Pronoun_Noun_Ratio(object):
             return tot_num_prons / tot_num_nouns
         return NOT_AVAILABLE
 
+class Total_Dependency_Distance(object):
+    """Class to calculate the sum of dependency distances
+        Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the total dependency distance across all sentences
+            Args:
+                None
+            Returns:
+                the sum of dependency distances
+        """
+        tot_dist = 0
+        for so in self.sentence_objs:
+            sd = so.stanza_doc.to_dict()[0]
+            tot_dist += np.sum([abs(int(dep['id']) - dep['head']) for dep in sd])
+        return tot_dist
+
+class Average_Dependency_Distance(object):
+    """Class to calculate the sum of dependency distances
+        Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the total dependency distance across all sentences
+            Args:
+                None
+            Returns:
+                the sum of dependency distances
+        """
+        tot_dist = []
+        for so in self.sentence_objs:
+            sd = so.stanza_doc.to_dict()[0]
+            tot_dist.append(sum([abs(int(dep['id']) - dep['head']) for dep in sd]))
+        return np.mean(tot_dist)
+
+
+class Total_Dependencies(object):
+    """Class to calculate the number of unique syntactic dependencies
+        Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the total number of unique dependencies across sentences
+            Args:
+                None
+            Returns:
+                the total number of unique dependencies
+        """
+        deprels = []
+        for so in self.sentence_objs:
+            sd = so.stanza_doc.to_dict()[0]
+            deprels.extend([dep['deprel'] for dep in sd])
+        return len(set(deprels))
+
+
+class Average_Dependencies(object):
+    """Class to calculate the average number of unique syntactic dependencies
+        Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the average number of unique dependencies across sentences
+            Args:
+                None
+            Returns:
+                the average number of unique dependencies
+        """
+        num_deprels = []
+        for so in self.sentence_objs:
+            sd = so.stanza_doc.to_dict()[0]
+            deprels = set([dep['deprel'] for dep in sd])
+            num_deprels.append(len(deprels))
+        return np.mean(num_deprels)
+
 
 class Closed_Class_Word_Rate(object):
     """Class to calculate the proportion of closed class words

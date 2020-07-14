@@ -387,17 +387,17 @@ class Document(object):
         """
         return self._extract_lexico_semantic_features('noun_rate', **kwargs)['noun_rate']
 
-        def numeral_rate(self, **kwargs):
-            """Extract the numeral rate.
-                Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    def numeral_rate(self, **kwargs):
+        """Extract the numeral rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
 
-                Args:
-                    kwargs (list): Optional arguments for threshold values
+            Args:
+                kwargs (list): Optional arguments for threshold values
 
-                Returns:
-                    The numeral rate across all sentence objects
-            """
-            return self._extract_lexico_semantic_features('numeral_rate', **kwargs)['numeral_rate']
+            Returns:
+                The numeral rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('numeral_rate', **kwargs)['numeral_rate']
 
     def particle_rate(self, **kwargs):
         """Extract the particle rate.
@@ -605,6 +605,62 @@ class Document(object):
         """
         return self._extract_lexico_semantic_features('pronoun_noun_ratio', **kwargs)[
             'pronoun_noun_ratio'
+        ]
+
+    def total_dependency_distance(self, **kwargs):
+        """Extract the total dependency distance.
+            Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                float: The total dependency distance across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('total_dependency_distance', **kwargs)[
+            'total_dependency_distance'
+        ]
+
+    def average_dependency_distance(self, **kwargs):
+        """Extract the average dependency distance.
+            Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                float: The average dependency distance across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('average_dependency_distance', **kwargs)[
+            'average_dependency_distance'
+        ]
+
+    def total_dependencies(self, **kwargs):
+        """Extract the number of unique dependency relations.
+            Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                float: The total number of unique dependencies across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('total_dependencies', **kwargs)[
+            'total_dependencies'
+        ]
+
+    def average_dependencies(self, **kwargs):
+        """Extract the average number of unique dependency relations.
+            Ref: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5337522/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                float: The average number of unique dependencies across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('average_dependencies', **kwargs)[
+            'average_dependencies'
         ]
 
     def closed_class_word_rate(self, **kwargs):
