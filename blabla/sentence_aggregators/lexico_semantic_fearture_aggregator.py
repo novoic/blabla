@@ -7,6 +7,173 @@ import blabla.utils.settings as settings
 from blabla.utils.global_params import *
 
 
+class Adjective_Rate(object):
+    """Class to calculate the adjective rate
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the adjective rate
+            Args:
+                None
+            Returns:
+                The total number of adjectives to the total number of words
+        """
+        tot_num_adjs, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_adjs += so.pos_tag_counter.get_pos_tag_count(ADJECTIVE)
+            tot_num_words += so.num_words()
+        return tot_num_adjs / tot_num_words
+
+
+class Adposition_Rate(object):
+    """Class to calculate the adposition rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the noun rate
+            Args:
+                None
+            Returns:
+                The total number of nouns to the total number of words
+        """
+        tot_num_nouns, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_nouns += so.pos_tag_counter.get_pos_tag_count(ADPOSITION)
+            tot_num_words += so.num_words()
+        return tot_num_nouns / tot_num_words
+
+
+class Adverb_Rate(object):
+    """Class to calculate the adverb rate
+        Ref: https://www.cs.toronto.edu/~kfraser/Fraser15-JAD.pdf
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the adverb rate
+            Args:
+                None
+            Returns:
+                The total number of adverbs to the total number of words
+        """
+        tot_num_advs, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_advs += so.pos_tag_counter.get_pos_tag_count(ADVERB)
+            tot_num_words += so.num_words()
+        return tot_num_advs / tot_num_words
+
+
+class Auxiliary_Rate(object):
+    """Class to calculate the auxiliary rate
+        Ref: https://www.cs.toronto.edu/~kfraser/Fraser15-JAD.pdf
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the adverb rate
+            Args:
+                None
+            Returns:
+                The total number of adverbs to the total number of words
+        """
+        tot_num_advs, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_advs += so.pos_tag_counter.get_pos_tag_count(AUXILIARY)
+            tot_num_words += so.num_words()
+        return tot_num_advs / tot_num_words
+
+
+class Conjunction_Rate(object):
+    """Class to calculate the conjunctions rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the conjunctions rate
+            Args:
+                None
+            Returns:
+                The total number of conjunctions to the total number of words
+        """
+        tot_num_cconj, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_cconj += so.pos_tag_counter.get_pos_tag_count(CONJUNCTION)
+            tot_num_words += so.num_words()
+        return tot_num_cconj / tot_num_words
+
+
+class Determiner_Rate(object):
+    """Class to calculate the determiner rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the conjunctions rate
+            Args:
+                None
+            Returns:
+                The total number of conjunctions to the total number of words
+        """
+        tot_num_cconj, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_cconj += so.pos_tag_counter.get_pos_tag_count(DETERMINER)
+            tot_num_words += so.num_words()
+        return tot_num_cconj / tot_num_words
+
+
+class Interjection_Rate(object):
+    """Class to calculate the interjection rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the conjunctions rate
+            Args:
+                None
+            Returns:
+                The total number of conjunctions to the total number of words
+        """
+        tot_num_cconj, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_cconj += so.pos_tag_counter.get_pos_tag_count(INTERJECTION)
+            tot_num_words += so.num_words()
+        return tot_num_cconj / tot_num_words
+
+
 class Noun_Rate(object):
     """Class to calculate the noun rate
         Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
@@ -29,6 +196,174 @@ class Noun_Rate(object):
             tot_num_nouns += so.pos_tag_counter.get_pos_tag_count(NOUN)
             tot_num_words += so.num_words()
         return tot_num_nouns / tot_num_words
+
+
+class Numeral_Rate(object):
+    """Class to calculate the numeral rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the conjunctions rate
+            Args:
+                None
+            Returns:
+                The total number of conjunctions to the total number of words
+        """
+        tot_num_cconj, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_cconj += so.pos_tag_counter.get_pos_tag_count(NUMERAL)
+            tot_num_words += so.num_words()
+        return tot_num_cconj / tot_num_words
+
+
+class Particle_Rate(object):
+    """Class to calculate the particle rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the conjunctions rate
+            Args:
+                None
+            Returns:
+                The total number of conjunctions to the total number of words
+        """
+        tot_num_cconj, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_cconj += so.pos_tag_counter.get_pos_tag_count(PARTICLE)
+            tot_num_words += so.num_words()
+        return tot_num_cconj / tot_num_words
+
+
+class Pronoun_Rate(object):
+    """Class to calculate the pronoun rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the pronoun rate
+            Args:
+                None
+            Returns:
+                The total number of pronouns to the total number of words
+        """
+        tot_num_pron, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_pron += so.pos_tag_counter.get_pos_tag_count(PRONOUN)
+            tot_num_words += so.num_words()
+        return tot_num_pron / tot_num_words
+
+
+class Proper_Noun_Rate(object):
+    """Class to calculate the proper noun rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the pronoun rate
+            Args:
+                None
+            Returns:
+                The total number of pronouns to the total number of words
+        """
+        tot_num_pron, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_pron += so.pos_tag_counter.get_pos_tag_count(PROPER_NOUN)
+            tot_num_words += so.num_words()
+        return tot_num_pron / tot_num_words
+
+
+class Punctuation_Rate(object):
+    """Class to calculate the punctuation rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the pronoun rate
+            Args:
+                None
+            Returns:
+                The total number of pronouns to the total number of words
+        """
+        tot_num_pron, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_pron += so.pos_tag_counter.get_pos_tag_count(PUNCTUATION)
+            tot_num_words += so.num_words()
+        return tot_num_pron / tot_num_words
+
+
+class Subordinating_Conjunction_Rate(object):
+    """Class to calculate the subordinating conjuction rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the pronoun rate
+            Args:
+                None
+            Returns:
+                The total number of pronouns to the total number of words
+        """
+        tot_num_pron, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_pron += so.pos_tag_counter.get_pos_tag_count(SUBORDINATING_CONJUNCTION)
+            tot_num_words += so.num_words()
+        return tot_num_pron / tot_num_words
+
+
+class Symbol_Rate(object):
+    """Class to calculate the symbol rate
+        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the pronoun rate
+            Args:
+                None
+            Returns:
+                The total number of pronouns to the total number of words
+        """
+        tot_num_pron, tot_num_words = 0, 0
+        for so in self.sentence_objs:
+            tot_num_pron += so.pos_tag_counter.get_pos_tag_count(SYMBOL)
+            tot_num_words += so.num_words()
+        return tot_num_pron / tot_num_words
 
 
 class Verb_Rate(object):
@@ -76,101 +411,6 @@ class Demonstrative_Rate(object):
             tot_num_demons += num_demonstratives(so.stanza_doc)
             tot_num_words += so.num_words()
         return tot_num_demons / tot_num_words
-
-
-class Adjective_Rate(object):
-    """Class to calculate the adjective rate
-    """
-
-    def __init__(self, sentence_objs):
-        """The init method to initialize with an array of sentence objects
-        """
-        self.sentence_objs = sentence_objs
-
-    def handle(self):
-        """Method to calculcate the adjective rate
-            Args:
-                None
-            Returns:
-                The total number of adjectives to the total number of words
-        """
-        tot_num_adjs, tot_num_words = 0, 0
-        for so in self.sentence_objs:
-            tot_num_adjs += so.pos_tag_counter.get_pos_tag_count(ADJECTIVE)
-            tot_num_words += so.num_words()
-        return tot_num_adjs / tot_num_words
-
-
-class Pronoun_Rate(object):
-    """Class to calculate the pronoun rate
-        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
-    """
-
-    def __init__(self, sentence_objs):
-        """The init method to initialize with an array of sentence objects
-        """
-        self.sentence_objs = sentence_objs
-
-    def handle(self):
-        """Method to calculcate the pronoun rate
-            Args:
-                None
-            Returns:
-                The total number of pronouns to the total number of words
-        """
-        tot_num_pron, tot_num_words = 0, 0
-        for so in self.sentence_objs:
-            tot_num_pron += so.pos_tag_counter.get_pos_tag_count(PRONOUN)
-            tot_num_words += so.num_words()
-        return tot_num_pron / tot_num_words
-
-
-class Adverb_Rate(object):
-    """Class to calculate the adverb rate
-        Ref: https://www.cs.toronto.edu/~kfraser/Fraser15-JAD.pdf
-    """
-
-    def __init__(self, sentence_objs):
-        """The init method to initialize with an array of sentence objects
-        """
-        self.sentence_objs = sentence_objs
-
-    def handle(self):
-        """Method to calculcate the adverb rate
-            Args:
-                None
-            Returns:
-                The total number of adverbs to the total number of words
-        """
-        tot_num_advs, tot_num_words = 0, 0
-        for so in self.sentence_objs:
-            tot_num_advs += so.pos_tag_counter.get_pos_tag_count(ADVERB)
-            tot_num_words += so.num_words()
-        return tot_num_advs / tot_num_words
-
-
-class Conjunction_Rate(object):
-    """Class to calculate the conjunctions rate
-        Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
-    """
-
-    def __init__(self, sentence_objs):
-        """The init method to initialize with an array of sentence objects
-        """
-        self.sentence_objs = sentence_objs
-
-    def handle(self):
-        """Method to calculcate the conjunctions rate
-            Args:
-                None
-            Returns:
-                The total number of conjunctions to the total number of words
-        """
-        tot_num_cconj, tot_num_words = 0, 0
-        for so in self.sentence_objs:
-            tot_num_cconj += so.pos_tag_counter.get_pos_tag_count(CONJUNCTION)
-            tot_num_words += so.num_words()
-        return tot_num_cconj / tot_num_words
 
 
 class Possessive_Rate(object):

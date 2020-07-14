@@ -145,7 +145,7 @@ class Document(object):
         return features_dict
 
     def _extract_discourse_and_pragmatic_feature_processor(self, *features, **kwargs):
-        """Extract discourse and pragmatic features across all sentence objects 
+        """Extract discourse and pragmatic features across all sentence objects
 
             Args:
                 features (list): The list of features to be extracted
@@ -291,6 +291,90 @@ class Document(object):
             'total_locution_time', **kwargs
         )['total_locution_time']
 
+    def adjective_rate(self, **kwargs):
+        """Extract the adjective rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The adjective rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('adjective_rate', **kwargs)['adjective_rate']
+
+    def adposition_rate(self, **kwargs):
+        """Extract the adposition rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The adposition rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('adposition_rate', **kwargs)['adposition_rate']
+
+    def adverb_rate(self, **kwargs):
+        """Extract the adverb rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The adverb rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('adverb_rate', **kwargs)['adverb_rate']
+
+    def auxiliary_rate(self, **kwargs):
+        """Extract the auxiliary rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The auxiliary rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('auxiliary_rate', **kwargs)['auxiliary_rate']
+
+    def conjuction_rate(self, **kwargs):
+        """Extract the conjuction rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The conjuction rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('conjuction_rate', **kwargs)['conjuction_rate']
+
+    def determiner_rate(self, **kwargs):
+        """Extract the determiner rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The determiner rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('determiner_rate', **kwargs)['determiner_rate']
+
+    def interjection_rate(self, **kwargs):
+        """Extract the interjection rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The interjection rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('interjection_rate', **kwargs)['interjection_rate']
+
     def noun_rate(self, **kwargs):
         """Extract the noun rate.
             Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
@@ -302,6 +386,90 @@ class Document(object):
                 The noun rate across all sentence objects
         """
         return self._extract_lexico_semantic_features('noun_rate', **kwargs)['noun_rate']
+
+        def numeral_rate(self, **kwargs):
+            """Extract the numeral rate.
+                Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+                Args:
+                    kwargs (list): Optional arguments for threshold values
+
+                Returns:
+                    The numeral rate across all sentence objects
+            """
+            return self._extract_lexico_semantic_features('numeral_rate', **kwargs)['numeral_rate']
+
+    def particle_rate(self, **kwargs):
+        """Extract the particle rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The particle rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('particle_rate', **kwargs)['particle_rate']
+
+    def pronoun_rate(self, **kwargs):
+        """Extract the pronoun rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The pronoun rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('pronoun_rate', **kwargs)['pronoun_rate']
+
+    def proper_noun_rate(self, **kwargs):
+        """Extract the proper_noun rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The proper_noun rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('proper_noun_rate', **kwargs)['proper_noun_rate']
+
+    def punctuation_rate(self, **kwargs):
+        """Extract the punctuation rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The punctuation rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('punctuation_rate', **kwargs)['punctuation_rate']
+
+    def subordinating_conjunction_rate(self, **kwargs):
+        """Extract the subordinating_conjunction rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The subordinating_conjunction rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('subordinating_conjunction_rate', **kwargs)['subordinating_conjunction_rate']
+
+    def symbol_rate(self, **kwargs):
+        """Extract the symbol rate.
+            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+                The symbol rate across all sentence objects
+        """
+        return self._extract_lexico_semantic_features('symbol_rate', **kwargs)['symbol_rate']
 
     def verb_rate(self, **kwargs):
         """Extract the verb rate.
