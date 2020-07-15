@@ -31,12 +31,12 @@ adverb rate|The rate of adverbs across sentences|***adverb_rate***|Stanza(66)|Ye
 auxiliary rate|The rate of auxiliaries across sentences|***auxiliary_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 conjunction rate|The rate of conjunctions across sentences|***conjunction_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 determiner rate|The rate of determiners across sentences|***determiner_rate***|Stanza(66)|Yes|No|String or JSON | - | -
-injection rate|The rate of injections across sentences|***injection_rate***|Stanza(66)|Yes|No|String or JSON | - | -
+interjection rate|The rate of interjections across sentences|***interjection_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 numeral rate|The rate of numerals across sentences|***numeral_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 particle rate|The rate of particles across sentences|***particle_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 pronoun rate|The rate of pronouns across sentences|***pronoun_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 proper noun rate|The rate of proper nouns across sentences|***proper_noun_rate***|Stanza(66)|Yes|No|String or JSON | - | -
-punctutation rate|The rate of punctutations across sentences|***punctutation_rate***|Stanza(66)|Yes|No|String or JSON | - | -
+punctuation rate|The rate of punctuations across sentences|***punctuation_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 subordinating conjunction rate|The rate of subordinating conjunctions across sentences|***subordinating_conjunction_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 symbol rate|The rate of symbols across sentences|***symbol_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 possessive rate|The rate of possessive words across sentences|***possessive_rate***|Stanza(66)|Yes|No|String or JSON | - | -
