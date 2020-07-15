@@ -1,3 +1,5 @@
+import traceback
+
 from blabla.sentence_aggregators.phonetic_and_phonological_feature_aggregator import (
     phonetic_and_phonological_feature_processor,
 )
@@ -15,7 +17,7 @@ from blabla.sentence_aggregators.discourse_and_pragmatic_feature_aggregator impo
 )
 import blabla.utils.settings as settings
 from blabla.utils.exceptions import *
-import traceback
+
 
 
 class Document(object):
@@ -494,47 +496,6 @@ class Document(object):
         """
         return self._extract_lexico_semantic_features('demonstrative_rate', **kwargs)[
             'demonstrative_rate'
-        ]
-
-    def adjective_rate(self, **kwargs):
-        """Extract the adjective rate
-
-            Args:
-                kwargs (list): Optional arguments for threshold values
-
-            Returns:
-                float: The adjective rate across all sentence objects
-        """
-        return self._extract_lexico_semantic_features('adjective_rate', **kwargs)[
-            'adjective_rate'
-        ]
-
-    def pronoun_rate(self, **kwargs):
-        """Extract the pronoun rate.
-            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
-
-            Args:
-                kwargs (list): Optional arguments for threshold values
-
-            Returns:
-                float: The pronoun rate across all sentence objects
-        """
-        return self._extract_lexico_semantic_features('pronoun_rate', **kwargs)[
-            'pronoun_rate'
-        ]
-
-    def adverb_rate(self, **kwargs):
-        """Extract the adverb rate.
-            Ref: https://www.cs.toronto.edu/~kfraser/Fraser15-JAD.pdf
-
-            Args:
-                kwargs (list): Optional arguments for threshold values
-
-            Returns:
-                float: The adverb rate across all sentence objects
-        """
-        return self._extract_lexico_semantic_features('adverb_rate', **kwargs)[
-            'adverb_rate'
         ]
 
     def conjunction_rate(self, **kwargs):
