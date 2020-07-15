@@ -49,11 +49,11 @@ class Document(object):
                         )
                     )
 
-    def compute_features(self, *feature_list, **kwargs):
+    def compute_features(self, feature_list, **kwargs):
         """Compute features
 
             Args:
-                feature_list (str): A list of features to be extracted
+                feature_list (list of str): A list of features to be extracted
 
             Returns:
                 dict: A dictionary of features and their values
