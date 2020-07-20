@@ -558,7 +558,10 @@ class Average_Dependency_Distance(object):
         for so in self.sentence_objs:
             sd = so.stanza_doc.to_dict()[0]
             tot_dist.append(sum([abs(int(dep['id']) - dep['head']) for dep in sd]))
-        return np.mean(tot_dist)
+
+        if tot_dist:
+            return np.mean(tot_dist)
+        return NOT_AVAILABLE
 
 
 class Total_Dependencies(object):
@@ -607,7 +610,10 @@ class Average_Dependencies(object):
             sd = so.stanza_doc.to_dict()[0]
             deprels = set([dep['deprel'] for dep in sd])
             num_deprels.append(len(deprels))
-        return np.mean(num_deprels)
+
+        if num_deprels:
+            return np.mean(num_deprels)
+        return NOT_AVAILABLE
 
 
 class Closed_Class_Word_Rate(object):
