@@ -46,7 +46,7 @@ To set up CoreNLP version 4.0.0, do `./setup_corenlp.sh` after changing `corenlp
 
 After installation, or if you already have CoreNLP installed, let BlaBla know where to find it using `export CORENLP_HOME=/path/to/corenlp`.
 
-CoreNLP also requires the [Java Developer Kit](https://www.oracle.com/java/technologies/javase-downloads.html) to be installed.
+CoreNLP also requires the [Java Developer Kit](https://www.oracle.com/java/technologies/javase-downloads.html) to be installed. To check whether it is already installed locally, run `$ javac -version`.
 
 ## Quickstart
 Print the noun rate for some example text using Python (find the YAML configs inside the BlaBla repo):
