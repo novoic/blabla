@@ -21,7 +21,7 @@ speech rate| The number of words per minute | ***speech_rate*** | Stanza(66) | N
 maximum speech rate| The average number of words per minute across the top N (set to 10 by default) rapid sentences| ***maximum_speech_rate*** | Stanza(66) | No | No | JSON | ***num_rapid_sentences*** | 10
 total phonation time| Total time duration of all words across all sentences | ***total_phonation_time*** | Stanza(66) | No | No | JSON | - | -
 standardized phonation time| The total number of words divided by the total phonation time | ***standardized_phonation_time*** | Stanza(66) | No | No | JSON | - | -
-total locution time| The total amount of time in speech that contains both speech and pauses | ***total_locution_time*** | Stanza(66) | No | No | JSON | - | - 
+total locution time| The total amount of time in speech that contains both speech and pauses | ***total_locution_time*** | Stanza(66) | No | No | JSON | - | -
 noun rate|The rate of nouns across sentences |***noun_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 verb rate|The rate of verbs across sentences|***verb_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 demonstrative rate|The rate of demonstrative across sentences|***demonstrative_rate***|Stanza(66)|Yes|No|String or JSON | - | -
@@ -47,7 +47,6 @@ closed-class word rate |The proportions of determiners, pronouns, conjunctions a
 open-class word rate |The proportions of nouns, verbs, adjectives and adverbs to all words across sentences|***open_class_word_rate***|Stanza(66)|Yes|No|String or JSON | - | -
 total dependency distance|The total distance of all dependencies across sentences|***total_dependency_distance***|Stanza(66)|Yes|No|String or JSON | - | -
 average dependency distance|The average distance of all dependencies across sentences|***average_dependency_distance***|Stanza(66)|Yes|No|String or JSON | - | -
-total dependency distance|The total distance of all dependencies across sentences|***total_dependency_distance***|Stanza(66)|Yes|No|String or JSON | - | -
 total dependencies|The total number of unique dependencies across sentences|***total_dependencies***|Stanza(66)|Yes|No|String or JSON | - | -
 average dependencies|The average number of unique dependencies across sentences|***average_dependencies***|Stanza(66)|Yes|No|String or JSON | - | -
 content density |The proportions of numebr of open class words to the numebr of close class words |***content_density***|Stanza(66)|Yes|No|String or JSON | - | -
