@@ -63,23 +63,27 @@ class DocumentProcessor(object):
             )
         return raw_sentences, sentence_jsons
 
-    def break_text_into_sentences(self, text):
+    def break_text_into_sentences(self, text, force_split):
         """Break the input raw text string into sentences using Stanza
 
 			Args:
 				doc_json (dict): The input json representing the input document
+                force_split (bool): If True, split sentences on newline, else use Stanza tokenization
 
 			Returns:
 				list : The list of sentences with raw text
 				list : The list of sentences as jsons
 		"""
         sentences = []
-        stanza_doc = self.nlp(text)
-        for sentence in stanza_doc.sentences:
-            sentences.append(sentence.text)
+        if force_split:
+            sentences = [s for s in text.split('\n') if s]
+        else:
+            stanza_doc = self.nlp(text)
+            for sentence in stanza_doc.sentences:
+                sentences.append(sentence.text)
         return sentences
 
-    def analyze(self, doc, input_format):
+    def analyze(self, doc, input_format, force_split=False):
         """Method to analyze the input as either a json or a string and return back a Document object
 
 			Args:
@@ -105,7 +109,7 @@ class DocumentProcessor(object):
                 sentence.json = sent_json
                 doc_obj.sentence_objs.append(sentence)
         else:  # the input format here is string
-            raw_sentences = self.break_text_into_sentences(doc)
+            raw_sentences = self.break_text_into_sentences(doc, force_split)
             for raw_sent in raw_sentences:
                 sentence = Sentence(self.lang, self.nlp, self.client, raw_sent)
                 doc_obj.sentence_objs.append(sentence)
