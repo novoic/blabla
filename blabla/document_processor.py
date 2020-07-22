@@ -37,7 +37,6 @@ class DocumentProcessor(object):
         self.client = CoreNLPClient(
             properties=language_properties_fp, **self.config["corenlp"]
         )
-        self.client.start()
         return self
 
     def break_json_into_chunks(self, doc_json):
