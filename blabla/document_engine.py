@@ -69,7 +69,6 @@ class Document(object):
         features = {}
         for feature_name in feature_list:
             try:
-                print(f'here: {feature_name}')
                 method_to_call = getattr(self, feature_name)
                 result = method_to_call(**kwargs)
                 features[feature_name] = result
