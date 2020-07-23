@@ -341,18 +341,6 @@ class Document(object):
         """
         return self._extract_lexico_semantic_features('auxiliary_rate', **kwargs)['auxiliary_rate']
 
-    def conjuction_rate(self, **kwargs):
-        """Extract the conjuction rate.
-            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
-
-            Args:
-                kwargs (list): Optional arguments for threshold values
-
-            Returns:
-                The conjuction rate across all sentence objects
-        """
-        return self._extract_lexico_semantic_features('conjuction_rate', **kwargs)['conjuction_rate']
-
     def determiner_rate(self, **kwargs):
         """Extract the determiner rate.
             Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
