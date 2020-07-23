@@ -35,7 +35,7 @@ def compute_features(features_yaml_path, stanza_config_file_path, input_dir_path
 				input_format (str): The format of the input (string / json)
 
 			Returns:
-				None: 
+				None:
 	"""
 	output_file = open(output_file_path, 'w')
 	features_json = yaml.load(open(features_yaml_path, 'r'))
@@ -54,7 +54,7 @@ def compute_features(features_yaml_path, stanza_config_file_path, input_dir_path
 			with open(os.path.join(input_dir_path, input_fp)) as f:
 				content = f.read()
 			doc = doc_proc.analyze(content, input_format)
-			res_json = doc.compute_features(*features_json['features'])
+			res_json = doc.compute_features(features_json['features'])
 			res = {}
 			res = {key: [val] for key, val in res_json.items()}
 			df = df.append(pd.DataFrame.from_dict(res))
@@ -63,7 +63,7 @@ def compute_features(features_yaml_path, stanza_config_file_path, input_dir_path
 
 if __name__ == "__main__":
 	"""The main Command Line Interface to BlaBla. We provide the path to the features YAML file, path to the
-			input file and a path to the output csv file that will contain the output features. We also 
+			input file and a path to the output csv file that will contain the output features. We also
 			specify the input format which is either a string or a json.
 
 			Args:
