@@ -69,6 +69,7 @@ class Document(object):
         features = {}
         for feature_name in feature_list:
             try:
+                print(f'here: {feature_name}')
                 method_to_call = getattr(self, feature_name)
                 result = method_to_call(**kwargs)
                 features[feature_name] = result
@@ -340,18 +341,6 @@ class Document(object):
                 The auxiliary rate across all sentence objects
         """
         return self._extract_lexico_semantic_features('auxiliary_rate', **kwargs)['auxiliary_rate']
-
-    def conjuction_rate(self, **kwargs):
-        """Extract the conjuction rate.
-            Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/
-
-            Args:
-                kwargs (list): Optional arguments for threshold values
-
-            Returns:
-                The conjuction rate across all sentence objects
-        """
-        return self._extract_lexico_semantic_features('conjuction_rate', **kwargs)['conjuction_rate']
 
     def determiner_rate(self, **kwargs):
         """Extract the determiner rate.
