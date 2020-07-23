@@ -57,7 +57,7 @@ with DocumentProcessor('stanza_config/stanza_config.yaml', 'en') as doc_proc:
     content = open('example_configs/example_document.txt').read()
     doc = doc_proc.analyze(content, 'string')
 
-res = doc.compute_features('noun_rate')
+res = doc.compute_features(['noun_rate'])
 print(res)
  ```  
 
@@ -90,7 +90,7 @@ with DocumentProcessor('stanza_config/stanza_config.yaml', 'en') as doc_proc:
     content = open('example_configs/example_document.txt').read()
     doc = doc_proc.analyze(content, 'string')
 
-res = doc.compute_features('noun_rate')
+res = doc.compute_features(['noun_rate', 'verb_rate'])
 print(res)
  ```  
     
@@ -104,7 +104,7 @@ with DocumentProcessor('stanza_config/stanza_config.yaml', 'en') as doc_proc:
     content = open('example_configs/example_document.json').read()
     doc = doc_proc.analyze(content, 'json')
     
-res = doc.compute_features('speech_rate')
+res = doc.compute_features(['speech_rate'])
 print(res)
 ```
  
