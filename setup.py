@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="blabla",
-    version="0.2.1",
+    version="0.2.2",
     description="Novoic linguistics feature extraction package.",
     url="http://github.com/novoic/BlaBla",
     author="Abhishek Shivkumar",
@@ -28,7 +28,7 @@ setup(
         "alzheimers-disease",
         "parkinsons-disease",
     ],
-    download_url="https://github.com/novoic/blabla/archive/v0.2.1.tar.gz",
+    download_url="https://github.com/novoic/blabla/archive/v0.2.2.tar.gz",
     install_requires=[
         "stanza==1.0.0",
         "flask==1.1.2",
@@ -41,7 +41,7 @@ setup(
         "pandas==1.0.3",
         "tqdm==4.46.0"
     ],
-    package_data={"": ["*.txt"]},
+    package_data={"blabla.language_resources": ["*.txt"]},
     include_package_data=True,
     scripts=["bin/blabla"],
     zip_safe=False,
