@@ -60,6 +60,8 @@ proportion of auxiliary verbs|The ratio of the number of auxiliary verbs to the 
 proportion of gerund verbs|The ratio of the number of gerund verbs to the number of verbs|***prop_gerund_verbs***|Stanza(66)|Yes|No|String or JSON | - | -
 proportion of participles|The ratio of the number of particile verbs to the number of verbs|***prop_participles***|Stanza(66)|Yes|No|String or JSON | - | -
 number of clauses|The number of clauses across the corpus|***num_clauses***|CoreNLP(6)|Yes|Yes|String or JSON | - | -
+number of t-units|The number of t-units across the corpus|***num_t_units***|CoreNLP(6)|Yes|Yes|String or JSON | - | -
+t-units rate|The rate of t-units across the corpus|***t_units_rate***|CoreNLP(6)|Yes|Yes|String or JSON | - | -
 clause rate|The number of clauses per sentence across the corpus|***clause_rate***|CoreNLP(6)|Yes|Yes|String or JSON | - | -
 number of dependent clauses|The number of Dependent Clauses |***num_dependent_clauses***|CoreNLP(6)|Yes|Yes|String or JSON | - | -
 dependent clauses rate|The rate of Dependent Clauses |***dependent_clause_rate***|CoreNLP(6)|Yes|Yes|String or JSON | - | -

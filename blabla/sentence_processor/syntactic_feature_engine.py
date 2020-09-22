@@ -43,6 +43,21 @@ def num_prepositional_phrases(const_pt):
     return len(pp_chunks)
 
 
+def num_t_units(const_pt):
+    """Returns the number of t-Units
+        Args:
+            const_pt (NLTK): The constituency parse tree
+
+        Returns
+            number of t-units (int): number of t-units
+    """
+    num_t_units = 0
+    for leaf in _leaves(const_pt, S_CLAUSE):
+        num_t_units += 1
+
+    return num_t_units
+
+
 def num_verb_phrases(const_pt):
     """Returns the number of verb phrases
         Ref: For Chinese, please see this manual - https://repository.upenn.edu/cgi/viewcontent.cgi?article=1040&context=ircs_reports

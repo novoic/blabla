@@ -808,6 +808,34 @@ class Document(object):
             'noun_phrase_rate'
         ]
 
+    def num_t_units(self, **kwargs):
+        """Extract the number of t units.
+            Ref: https://en.wikipedia.org/wiki/T-unit
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+               float: The number of t units across all sentence objects
+        """
+        return self._extract_syntactic_features('num_t_units', **kwargs)[
+            'num_t_units'
+        ]
+
+    def t_units_rate(self, **kwargs):
+        """Extract the t units rate.
+            Ref: https://en.wikipedia.org/wiki/T-unit
+
+            Args:
+                kwargs (list): Optional arguments for threshold values
+
+            Returns:
+               float: The t units rate across all sentence objects
+        """
+        return self._extract_syntactic_features('t_units_rate', **kwargs)[
+            't_units_rate'
+        ]
+
     def num_verb_phrases(self, **kwargs):
         """Extract the number of verb phrases.
             Ref: https://pubmed.ncbi.nlm.nih.gov/28321196/

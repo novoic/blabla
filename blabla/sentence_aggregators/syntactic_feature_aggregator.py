@@ -89,6 +89,47 @@ class Verb_Phrase_Rate(object):
             tot_num_verb_phrases += num_verb_phrases(so.const_pt)
         return tot_num_verb_phrases / len(self.sentence_objs)
 
+class Num_T_Units(object):
+    """Class to calculate the total number of T Units
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the total number of t units over all sentences
+            Args:
+                None
+            Returns:
+                The total number of t units over all sentences
+        """
+        tot_num_t_units = 0
+        for so in self.sentence_objs:
+            tot_num_t_units += num_t_units(so.const_pt)
+        return tot_num_t_units
+
+class T_Units_Rate(object):
+    """Class to calculate the rate of T Units
+    """
+
+    def __init__(self, sentence_objs):
+        """The init method to initialize with an array of sentence objects
+        """
+        self.sentence_objs = sentence_objs
+
+    def handle(self):
+        """Method to calculcate the rate of t units over all sentences
+            Args:
+                None
+            Returns:
+                The total number of t units over all sentences
+        """
+        tot_num_t_units = 0
+        for so in self.sentence_objs:
+            tot_num_t_units += num_t_units(so.const_pt)
+        return tot_num_t_units / len(self.sentence_objs)
 
 class Num_Clauses(object):
     """Class to calculate the total number of clauses over all sentences

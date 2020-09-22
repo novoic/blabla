@@ -67,7 +67,7 @@ class Sentence(object):
 	@property
 	def tot_num_characters(self):
 		"""A property method to return the total number of characters in the current sentence"""
-		return math.sum([len(word) for word in self._stanza_doc.sentences[0].words])
+		return math.sum([len(word.text) for word in self._stanza_doc.sentences[0].words])
 
 	@property
 	def speech_time(self):
