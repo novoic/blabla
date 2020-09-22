@@ -20,5 +20,7 @@ def init():
         "num_clauses",
         "clause_rate",
         "num_dependent_clauses",
-        "dependent_clause_rate"
+        "dependent_clause_rate",
+        "num_t_units",
+        "t_units_rate"
     ]
