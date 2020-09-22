@@ -824,7 +824,7 @@ class Document(object):
 
     def t_units_rate(self, **kwargs):
         """Extract the t units rate.
-            Ref: https://en.wikipedia.org/wiki/T-unit#:~:text=In%20linguistics%2C%20the%20term%20T,T%2Dunit%20is%20a%20sentence.
+            Ref: https://en.wikipedia.org/wiki/T-unit
 
             Args:
                 kwargs (list): Optional arguments for threshold values

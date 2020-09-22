@@ -44,7 +44,7 @@ def num_prepositional_phrases(const_pt):
 
 
 def num_t_units(const_pt):
-    """Returns the number of T-Units
+    """Returns the number of t-Units
         Args:
             const_pt (NLTK): The constituency parse tree
 
