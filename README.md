@@ -31,7 +31,11 @@ To install BlaBla using PyPI:
 ```bash
 pip install blabla
 ```
+BlaBla currently supports only PyTorch version 1.5.1. Once you install BlaBla using the above steps, please make sure that your PyTorch version is 1.5.1. Otherwise please install PyTorch version 1.5.1 using the following command
 
+```bash
+pip install torch==1.5.1
+```
 
 ### Installing CoreNLP
 For some features, BlaBla also requires [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/) to be installed. See `FEATURES.md` for a list of these features.
