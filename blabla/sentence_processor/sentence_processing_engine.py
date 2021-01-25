@@ -2,6 +2,7 @@ from nltk.tree import Tree
 from blabla.sentence_processor.yngve_tree import YngveNode
 from blabla.sentence_processor.pos_tag_counting_engine import PosTagCounter
 from blabla.utils.exceptions import *
+from blabla.utils.utils import get_nltk_tree
 import blabla.utils.settings as settings
 from blabla.utils.global_params import *
 import os
@@ -140,9 +141,8 @@ class Sentence(object):
 				parseTree (CoreNLP): The CoreNLP constituency parse tree object
 		"""
 		document = self.client.annotate(self._sent)
-		document = json.loads(document.text)
-		pt = document["sentences"][0]["parse"]
-		parseTree = Tree.fromstring(pt)
+		parseTree = document.sentence[0].parseTree
+		parseTree = get_nltk_tree(parseTree)
 		return parseTree
 
 	def num_words(self):
