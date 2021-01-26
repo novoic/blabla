@@ -1,9 +1,10 @@
 """A file containing helper functions"""
 
 from nltk.tree import Tree
+from typing import Any
 
 
-def get_nltk_tree(parse_tree) -> Tree:
+def get_nltk_tree(parse_tree: Any) -> Tree:
     """Given a parse_tree obtained from CoreNLP, this function recursively generates an NLTK
     Tree based on the parse_tree information.
     Args:
