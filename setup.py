@@ -30,7 +30,7 @@ setup(
     ],
     download_url="https://github.com/novoic/blabla/archive/v0.2.2.tar.gz",
     install_requires=[
-        "stanza>=1.1.0",
+        "stanza>=1.0.0,<2.0.0",
         "flask==1.1.2",
         "jsonpickle==1.4",
         "anytree==2.8.0",
