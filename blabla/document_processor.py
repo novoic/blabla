@@ -29,8 +29,9 @@ class DocumentProcessor(object):
         my_path = os.path.abspath(os.path.dirname(__file__))
         settings.init()
         settings.LANGUAGE = self.lang
-        stanza.download(self.lang, dir=self.config["stanza"]["dir"])
-        self.nlp = stanza.Pipeline(**self.config["stanza"], lang=self.lang)
+        stanza.download(self.lang)#, dir=self.config["stanza"]["dir"])
+        # self.nlp = stanza.Pipeline(**self.config["stanza"], lang=self.lang)
+        self.nlp = stanza.Pipeline(lang=self.lang)
         language_properties_fp = os.path.join(
             my_path, "language_resources", self.lang + "_properties.txt"
         )
