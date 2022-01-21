@@ -35,7 +35,7 @@ setup(
         "jsonpickle==1.4",
         "anytree==2.8.0",
         "nltk==3.5",
-        "ipython==7.13.0",
+        "ipython==7.16.3",
         "jsonschema==3.2.0",
         "pyyaml==5.3.1",
         "pandas==1.0.3",
